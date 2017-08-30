@@ -1,0 +1,601 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);* {
+  transition: ease .3s;
+}
+#root {
+  width: 100%;
+  height: 100%;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+html body,
+body body {
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+  -webkit-overflow-x: hidden;
+  background-color: white;
+}
+html a,
+body a {
+  color: black;
+  transition: ease 1.5s;
+}
+html a:focus,
+body a:focus,
+html a:hover,
+body a:hover {
+  color: inherit;
+}
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+}
+.preloader > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -425px;
+}
+.preloader > div > .gifka {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+.prices {
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  background-color: #f8f8f7;
+  padding: 50px 0;
+}
+.prices .container .landing-page .lp-title {
+  width: 90%;
+  margin: 0 auto 50px auto;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #d8d8d8;
+}
+.prices .container .landing-page .lp-price {
+  font-size: 60px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.prices .container .landing-page .lp-price span {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px;
+  margin: 10px  0;
+}
+.prices .container .landing-page .lp-details {
+  margin: 20px 0;
+}
+.prices .container .landing-page .lp-details span {
+  font-size: 18px;
+  text-align: center;
+  margin: 10px auto;
+  display: block;
+}
+.prices .container .landing-page .lp-signup {
+  position: absolute;
+  bottom: 5px;
+  left: 25%;
+  margin: 0;
+  width: 50%;
+  border: 2px solid black;
+  text-align: center;
+  margin: 50px auto;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.prices .container .landing-page .lp-signup:hover {
+  background-color: black;
+  color: white;
+}
+.prices .container > div {
+  margin: 0 0 30px 0;
+  height: 600px;
+}
+.prices .container > div .landing-page,
+.prices .container > div .blog,
+.prices .container > div .web-shop {
+  background-color: #fff;
+  height: 100%;
+}
+.quote {
+  position: relative;
+  height: 50vw;
+  background-image: url(/front/images/pro9.jpg);
+  background-size: cover;
+}
+.quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .3;
+}
+.contact-us {
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  width: 100%;
+  background-color: #f8f8f7;
+  padding: 50px 0;
+}
+.contact-us .container form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-us .container form div {
+  position: relative;
+  display: inline-grid;
+}
+.contact-us .container form label {
+  display: none;
+  position: absolute;
+  top: -20px;
+  color: red;
+}
+.contact-us .container form input {
+  height: 50px;
+  border: 0;
+  outline: none;
+  margin: 0 0 30px 0;
+  padding: 0 0 0 20px;
+}
+.contact-us .container form input:focus {
+  border: 2px solid black;
+}
+.contact-us .container form textarea {
+  border: 0;
+  outline: none;
+  margin: 0 0 30px 0;
+  padding: 15px 0 0 20px;
+}
+.contact-us .container form textarea:focus {
+  border: 2px solid black;
+}
+.contact-us .container form .send {
+  height: 50px;
+  border: 2px solid black;
+  margin: 0 0 30px 0;
+  padding: 0 0 0 20px;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  outline: none;
+}
+.contact-us .container form .send:hover {
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+}
+.contact-us .container div div span {
+  font-size: 38px;
+  font-weight: 600;
+}
+.contact-us .container div div .divider {
+  height: 3px;
+  width: 45px;
+  margin: 15px 0;
+  background-color: black;
+}
+.contact-us .container div div p {
+  padding: 15px 0;
+}
+.contact-us .container div div h4 {
+  padding: 15px 0;
+  font-weight: 600;
+}
+footer {
+  height: 70px;
+  background-color: black;
+  color: #b4b4ab;
+  font-size: 16px;
+}
+footer .left {
+  display: flex;
+  height: 70px;
+  padding: 15px 15px 15px 20px;
+}
+footer .left span {
+  margin: auto 0;
+}
+footer .right {
+  float: right;
+  display: flex;
+  padding: 15px 20px 15px 15px;
+  line-height: 30px;
+}
+footer .right span {
+  margin: auto 15px ;
+}
+footer .right a {
+  display: inline-block;
+  border: 1px solid grey;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  color: #b4b4ab;
+  cursor: pointer;
+  padding: 3px 5px;
+  margin: 0 5px;
+  text-align: center;
+  transition: ease .1s;
+}
+footer .right a:hover {
+  background-color: #fff;
+  color: black;
+}
+.mobile .header-title > span {
+  font-size: 36px;
+}
+.mobile .header-list {
+  display: none;
+  position: absolute;
+  top: 90px;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  transition: 0;
+}
+.mobile .header-list .header-menu {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.mobile .header-list .header-menu li {
+  font-size: 36px;
+  width: 200px;
+  margin: 0 auto 50px auto;
+}
+.mobile .header-list .header-menu li a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.mobile .burger {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+}
+.mobile .burger span {
+  display: block;
+  background-color: black;
+  width: 100%;
+  height: 9px;
+  margin-bottom: 9px;
+}
+.mobile .works {
+  width: 100%;
+}
+.mobile .works .right-sidebar .row > div .rs-hover {
+  width: 0;
+  height: 0;
+}
+.mobile .works .left-sidebar h1 {
+  font-size: 56px;
+}
+.mobile .works .left-sidebar p {
+  font-size: 36px;
+}
+.mobile .prices {
+  font-size: 36px;
+}
+.mobile .prices h1 {
+  font-size: 60px;
+}
+.mobile .prices .landing-page .lp-details span {
+  font-size: 36px;
+}
+.mobile .prices > div {
+  width: 100%;
+}
+.mobile .prices > div > div {
+  height: 800px;
+}
+.mobile .contact-us {
+  font-size: 36px;
+}
+.mobile .contact-us h4 {
+  font-size: 32px;
+}
+.mobile .contact-us > div {
+  width: 100%;
+}
+.mobile .contact-us #contact-form {
+  font-size: 36px;
+}
+.mobile .contact-us #contact-form input,
+.mobile .contact-us #contact-form .send {
+  height: 100px;
+  margin: 30px 0;
+}
+.mobile .contact-us #contact-form textarea {
+  margin: 30px 0;
+}
+.mobile footer {
+  height: 160px;
+}
+.mobile footer .left,
+.mobile footer .right {
+  display: flex;
+  justify-content: center;
+}
+.mobile footer .left span,
+.mobile footer .right span {
+  font-size: 36px;
+}
+.mobile footer .right {
+  float: none;
+}
+.tablet .header-title > span {
+  font-size: 26px;
+}
+.tablet .header-list {
+  display: none;
+  position: absolute;
+  top: 90px;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  transition: 0;
+}
+.tablet .header-list .header-menu {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.tablet .header-list .header-menu li {
+  font-size: 26px;
+  width: 200px;
+  margin: 0 auto 50px auto;
+}
+.tablet .header-list .header-menu li a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.tablet .burger {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+}
+.tablet .burger span {
+  display: block;
+  background-color: black;
+  width: 100%;
+  height: 7px;
+  margin-bottom: 7px;
+}
+.tablet .works {
+  width: 100%;
+}
+.tablet .works .right-sidebar .row > div .rs-hover {
+  width: 0;
+  height: 0;
+}
+.tablet .works .left-sidebar h1 {
+  font-size: 36px;
+}
+.tablet .works .left-sidebar p {
+  font-size: 26px;
+}
+.tablet .prices > div {
+  width: 100%;
+}
+.tablet .contact-us {
+  font-size: 26px;
+}
+.tablet .contact-us h4 {
+  font-size: 22px;
+}
+.tablet .contact-us > div {
+  width: 100%;
+}
+.tablet .contact-us #contact-form {
+  font-size: 26px;
+}
+.tablet .contact-us #contact-form input,
+.tablet .contact-us #contact-form .send {
+  height: 50px;
+}
+.tablet .contact-us #contact-form label {
+  font-size: 20px;
+}
+.tablet footer span {
+  font-size: 26px;
+}
+.tablet footer > div {
+  width: 100%;
+}
+.tablet footer .left {
+  text-align: left;
+}
+.tablet footer .right {
+  text-align: right;
+}
+.main-image {
+  width: 100%;
+  height: 100%;
+  background: url(/front/images/fullscreen14.jpg) no-repeat center;
+  background-size: cover;
+}
+.main-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .3;
+}
+.main-image .overlay-title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  height: 60px;
+  margin: 0 0 0 -150px;
+}
+.main-image .overlay-title span {
+  color: #fff;
+  font-weight: bold;
+  font-size: 40px;
+}
+.overlay-arrow {
+  position: absolute;
+  top: 85%;
+  left: 0;
+  width: 100%;
+  height: 60px;
+}
+.overlay-arrow a {
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  color: #fff;
+}
+.overlay-arrow a:hover {
+  cursor: pointer;
+}
+#navbar {
+  position: relative;
+  height: 90px;
+}
+#header {
+  z-index: 100;
+  background-color: #fff;
+}
+header {
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  height: 90px;
+}
+header a {
+  padding: 10px;
+}
+header a:hover {
+  color: black;
+}
+header .header-left {
+  display: flex;
+  float: left;
+  flex-direction: row;
+}
+header .header-logo {
+  float: left;
+}
+header .header-logo img {
+  width: 95px;
+}
+header .header-logo span {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1vw;
+}
+header .header-title {
+  line-height: 90px;
+}
+header .header-title span {
+  font-size: 1.2vw;
+}
+header .header-list {
+  height: 90px;
+  float: right;
+  background-color: #fff;
+}
+header .header-menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 1vw;
+  font-weight: 600;
+  line-height: 90px;
+}
+header .header-menu li {
+  padding: 0 15px 0 0;
+  margin: 0 0 0 30px;
+  cursor: pointer;
+  transition: ease .5s;
+}
+header .header-menu li:hover {
+  text-decoration: underline;
+}
+.works {
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  padding: 50px 0;
+}
+.works div {
+  margin: 0 auto;
+}
+.works h1 {
+  font-size: 34px;
+  font-weight: 600;
+}
+.works p {
+  font-size: 18px;
+  text-align: justify;
+}
+.left-sidebar .divider {
+  height: 3px;
+  width: 45px;
+  margin: 15px 0;
+  background-color: black;
+}
+.right-sidebar .row > div {
+  margin: 0 0 30px 0;
+}
+.right-sidebar .row > div .rs-hover {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 92%;
+  height: 100%;
+  transition: ease .5s;
+  display: flex;
+  cursor: pointer;
+}
+.right-sidebar .row > div .rs-hover > span {
+  position: absolute;
+  top: 45%;
+  display: none;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin: auto;
+  opacity: none;
+}
+.right-sidebar .row > div .rs-hover:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+.right-sidebar img {
+  width: 100%;
+}

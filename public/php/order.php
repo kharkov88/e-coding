@@ -1,7 +1,16 @@
 <?php
-	header('Content-type: text/html; charset=utf-8');
-	error_reporting(0);   
-
+$ALLOWED_DOMAINS=['http://localhost:3000/','https://radiant-journey-51966.herokuapp.com/'];
+$fromDomain = $_SERVER['HTTP_REFERER'];
+$length = iconv_strlen($fromDomain);
+if(!empty($fromDomain)&&in_array($fromDomain,$ALLOWED_DOMAINS)){
+    header('Access-Control-Allow-Origin:'. substr($fromDomain,0,$length-1) );
+    header('Access-Control-Allow-Credentials: true');
+    header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+    header('Access-Control-Allow-Headers: Content-Type');
+    header('Access-Control-Max-Age: 1000');
+    header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Disposition, Content-Description');
+}  
+    error_reporting(0);   
 if(!empty($_POST['send'])) {
 
 	$name = substr(htmlspecialchars(trim($_POST['name'])), 0, 300);
@@ -19,13 +28,9 @@ if(!empty($_POST['send'])) {
 	$theme = "Заявка Z".$Nzakaz;
 
 	mail("emperor343@gmail.com", $theme, $mess, "From: mysite.com <mymail@mail.ru>\nContent-Type: text/html;\n charset=utf-8\nX-Priority: 0");
-	
 	echo "<h3>Success!</h3>";   
     }
-else {
-	
-	echo "<h2>Error server!</h2>";
-	
-}
-	
+else {	
+	echo "<h2>Error server!</h2>";	
+}	
 ?>
